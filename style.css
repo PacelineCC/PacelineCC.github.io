@@ -13,6 +13,16 @@
   --footer-bg: #1F1E22;
   --animation-bounce: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55);
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
 .farro-light {
   font-family: "Farro", sans-serif;
   font-weight: 300;
@@ -87,6 +97,9 @@ body {
   padding: 0;
   text-align: center;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* === HEADER PAGE === */
@@ -95,7 +108,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   z-index: 1000;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 header.header-transparent {
   background: transparent;
@@ -295,12 +311,16 @@ nav a:hover {
 /* === MAIN PAGE === */
 main {
   background-color: var(--gray-dark);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 .image-groupe-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -354,6 +374,9 @@ main {
   justify-content: center;
   gap: 0px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .section-about-text,
 .section-about-img {
@@ -486,11 +509,12 @@ main {
 }
 
 .footer-logo {
-  max-width: none;
+  max-width: 100%;
   width: 97%;
   color: white;
   padding-left: 12px;
   padding-right: 6px;
+  box-sizing: border-box;
 }
 .footer-logo svg path[fill="white"] {
   fill: var(--green-intense);
